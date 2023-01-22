@@ -21,6 +21,59 @@
                 , <&macro_release &kp RALT>
                 ;
         };
+        zm_at: zm_at {
+            label = "zm_at";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp N2>
+                , <&macro_release &kp RALT>
+                ;
+        };
+        zm_lcbr: zm_lcbr {
+            label = "zm_lcbr";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp N7>
+                , <&macro_release &kp RALT>
+                ;
+        };
+        
+        zm_lbr: zm_lbr {
+            label = "zm_lbr";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp N8>
+                , <&macro_release &kp RALT>
+                ;
+        };        
+
+        zm_rbr: zm_rbr {
+            label = "zm_rbr";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp N9>
+                , <&macro_release &kp RALT>
+                ;
+        };        
+
+        zm_rcbr: zm_rcbr {
+            label = "zm_rcbr";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp N0>
+                , <&macro_release &kp RALT>
+                ;
+        };
     };
 };
 
@@ -47,10 +100,19 @@
 
                 raise_layer {
                         bindings = <
-   &kp  TAB  &kp F1        &kp F2  &kp F3    &kp F4 &kp F5       &kp F6    &kp F7    &kp F8    &kp F9   &kp F10  &trans
-   &kp LSHFT &kp F11       &kp F12 &trans    &trans &trans       &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LCTRL &zm_int_pipe  &trans  &trans    &trans &trans       &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE             &kp RET   &trans    &kp LALT
+   &trans  &trans       &zm_at &trans &trans &trans       &trans &zm_lcbr &zm_lbr &zm_rbr &zm_rcbr &trans 
+   &trans  &trans       &trans &trans &trans &trans       &trans &trans   &trans  &trans  &trans   &trans 
+   &trans  &zm_int_pipe &trans &trans &trans &trans       &trans &trans   &trans  &trans  &trans   &trans 
+                    	     &trans &mo 3 &trans           &trans &trans &trans 
+                        >;
+                };
+
+                function_layer {
+                        bindings = <
+   &kp F1  &kp F2  &kp F3 &kp F4 &kp F5 &kp F6       &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+   &trans &trans  &trans  &trans &trans &trans       &trans &trans &trans &trans  &trans  &trans
+   &trans &trans  &trans  &trans &trans &trans       &trans &trans &trans &trans  &trans  &trans
+                   	  &trans &trans &trans       &trans &trans &trans
                         >;
                 };
         };
