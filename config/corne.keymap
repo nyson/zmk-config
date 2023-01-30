@@ -123,17 +123,17 @@
                 lower_layer {
                         bindings = <
    &kp ESC    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                &kp N6    &kp N7    &kp N8    &kp N9    &kp N0 &kp MINUS
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans                &kp PG_UP &kp UP    &kp PG_DN &trans    &trans &trans 
-   &kp LCTRL  &kp NUBS     &trans       &kp HOME     &kp END      &trans                &kp LEFT  &kp DOWN  &kp RIGHT &trans    &trans &kp DEL
+   &kp LSHFT  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4          &kp PG_UP &kp UP    &kp PG_DN &trans    &trans &trans 
+   &kp LCTRL  &kp NUBS     &trans       &kp HOME     &kp END      &trans                &kp LEFT  &kp DOWN  &kp RIGHT &trans    &trans &trans
                           	        &kp LALT     &trans       &kp SPACE             &kp RET   &trans    &kp LGUI
                         >;      
                 };
 
                 raise_layer {
                         bindings = <
-   &trans  &trans       &zm_at   &zm_pound &zm_dollar &trans       &trans &zm_lcbr &zm_lbr &zm_rbr &zm_rcbr &trans 
-   &trans  &trans       &zm_euro &trans    &trans     &trans       &trans &trans   &trans  &trans  &trans   &trans 
-   &trans  &zm_int_pipe &trans   &trans    &trans     &trans       &trans &trans   &trans  &trans  &trans   &trans 
+   &trans  &trans       &zm_at &trans &trans &trans       &trans &zm_lcbr &zm_lbr &zm_rbr &zm_rcbr &kp EQUAL 
+   &trans  &trans       &trans &trans &trans &trans       &trans &trans   &trans  &trans  &kp RBKT &kp NON_US_HASH
+   &trans  &zm_int_pipe &trans &trans &trans &trans       &trans &trans   &trans  &trans  &trans   &kp DEL 
                     	     &trans &mo 3 &trans           &trans &trans &trans 
                         >;
                 };
