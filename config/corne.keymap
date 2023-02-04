@@ -11,8 +11,8 @@
 // combo_pipe
 / {
     macros {
-        zm_int_pipe: zm_int_pipe {
-            label = "zm_int_pipe";
+        zm_pipe: zm_pipe {
+            label = "zm_pipe";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -72,7 +72,7 @@
                 , <&macro_release &kp RALT>
                 ;
         };
-        
+
         zm_lbr: zm_lbr {
             label = "zm_lbr";
             compatible = "zmk,behavior-macro";
@@ -82,7 +82,7 @@
                 , <&macro_tap &kp N8>
                 , <&macro_release &kp RALT>
                 ;
-        };        
+        };
 
         zm_rbr: zm_rbr {
             label = "zm_rbr";
@@ -93,7 +93,7 @@
                 , <&macro_tap &kp N9>
                 , <&macro_release &kp RALT>
                 ;
-        };        
+        };
 
         zm_rcbr: zm_rcbr {
             label = "zm_rcbr";
@@ -102,6 +102,17 @@
             bindings
                 = <&macro_press &kp RALT>
                 , <&macro_tap &kp N0>
+                , <&macro_release &kp RALT>
+                ;
+        };
+
+        zm_tilde: zm_tilde {
+            label = "zm_tilde";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp RBKT>
                 , <&macro_release &kp RALT>
                 ;
         };
@@ -123,18 +134,18 @@
                 lower_layer {
                         bindings = <
    &kp ESC    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                &kp N6    &kp N7    &kp N8    &kp N9    &kp N0 &kp MINUS
-   &kp LSHFT  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4          &kp PG_UP &kp UP    &kp PG_DN &trans    &trans &trans 
+   &kp LSHFT  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4          &kp PG_UP &kp UP    &kp PG_DN &trans    &trans &trans
    &kp LCTRL  &kp NUBS     &trans       &kp HOME     &kp END      &trans                &kp LEFT  &kp DOWN  &kp RIGHT &trans    &trans &trans
                           	        &kp LALT     &trans       &kp SPACE             &kp RET   &trans    &kp LGUI
-                        >;      
+                        >;
                 };
 
                 raise_layer {
                         bindings = <
-   &trans  &trans       &zm_at &trans &trans &trans       &trans &zm_lcbr &zm_lbr &zm_rbr &zm_rcbr &kp EQUAL 
-   &trans  &trans       &trans &trans &trans &trans       &trans &trans   &trans  &trans  &kp RBKT &kp NON_US_HASH
-   &trans  &zm_int_pipe &trans &trans &trans &trans       &trans &trans   &trans  &trans  &trans   &kp DEL 
-                    	     &trans &mo 3 &trans           &trans &trans &trans 
+   &trans  &trans   &zm_at    &zm_pound &zm_dollar &trans       &trans &zm_lcbr &zm_lbr &zm_rbr &zm_rcbr &kp EQUAL
+   &trans  &trans   &zm_euro  &trans    &trans     &trans       &trans &trans   &trans  &trans  &kp RBKT &kp NON_US_HASH
+   &trans  &zm_pipe &zm_tilde &trans    &trans     &trans       &trans &trans   &trans  &trans  &trans   &kp DEL
+                    	     &trans &mo 3 &trans           &trans &trans &trans
                         >;
                 };
 
